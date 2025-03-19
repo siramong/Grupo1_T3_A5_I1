@@ -29,66 +29,66 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenu3 = new javax.swing.JMenu();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        MenuBoton = new javax.swing.JMenu();
+        btnCrearVector = new javax.swing.JMenuItem();
+        btnIngresarDatos = new javax.swing.JMenuItem();
+        btnMostrarMayor = new javax.swing.JMenuItem();
+        btnMostrarListado = new javax.swing.JMenuItem();
+        btnSalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        btnInstructivo = new javax.swing.JMenuItem();
+        btnAcercaDe = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Opciones");
+        MenuBoton.setText("Opciones");
 
-        jMenuItem1.setText("Crear Vector");
-        jMenu1.add(jMenuItem1);
+        btnCrearVector.setText("Crear Vector");
+        MenuBoton.add(btnCrearVector);
 
-        jMenuItem2.setText("Ingresar datos");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        btnIngresarDatos.setText("Ingresar datos");
+        btnIngresarDatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                btnIngresarDatosActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        MenuBoton.add(btnIngresarDatos);
 
-        jMenuItem3.setText("Mostrar Mayor");
-        jMenu1.add(jMenuItem3);
+        btnMostrarMayor.setText("Mostrar Mayor");
+        MenuBoton.add(btnMostrarMayor);
 
-        jMenuItem4.setText("Mostrar listado");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarListado.setText("Mostrar listado");
+        btnMostrarListado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                btnMostrarListadoActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
+        MenuBoton.add(btnMostrarListado);
 
-        jMenuItem5.setText("Salir");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        MenuBoton.add(btnSalir);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(MenuBoton);
 
         jMenu2.setText("Ayuda");
 
-        jMenuItem6.setText("Instructivo");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        btnInstructivo.setText("Instructivo");
+        btnInstructivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                btnInstructivoActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu2.add(btnInstructivo);
 
-        jMenuItem7.setText("Acerca de:");
-        jMenu2.add(jMenuItem7);
+        btnAcercaDe.setText("Acerca de:");
+        jMenu2.add(btnAcercaDe);
 
         jMenuBar1.add(jMenu2);
 
@@ -108,21 +108,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void btnInstructivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInstructivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_btnInstructivoActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void btnIngresarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarDatosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_btnIngresarDatosActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void btnMostrarListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarListadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_btnMostrarListadoActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,16 +160,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu MenuBoton;
+    private javax.swing.JMenuItem btnAcercaDe;
+    public javax.swing.JMenuItem btnCrearVector;
+    public javax.swing.JMenuItem btnIngresarDatos;
+    private javax.swing.JMenuItem btnInstructivo;
+    public javax.swing.JMenuItem btnMostrarListado;
+    public javax.swing.JMenuItem btnMostrarMayor;
+    public javax.swing.JMenuItem btnSalir;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     // End of variables declaration//GEN-END:variables
 }
