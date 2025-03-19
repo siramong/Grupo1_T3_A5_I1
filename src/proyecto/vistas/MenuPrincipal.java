@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package proyecto.vistas;
+import proyecto.Modelo;
+import proyecto.Controlador;
 
 /**
  *
@@ -14,8 +16,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form MenuPrincipal
      */
+    Controlador contr;
+    Modelo model;
     public MenuPrincipal() {
         initComponents();
+        model = new Modelo();
+        contr = new Controlador(this,model);
     }
 
     /**
@@ -161,10 +167,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu MenuBoton;
-    private javax.swing.JMenuItem btnAcercaDe;
+    public javax.swing.JMenuItem btnAcercaDe;
     public javax.swing.JMenuItem btnCrearVector;
     public javax.swing.JMenuItem btnIngresarDatos;
-    private javax.swing.JMenuItem btnInstructivo;
+    public javax.swing.JMenuItem btnInstructivo;
     public javax.swing.JMenuItem btnMostrarListado;
     public javax.swing.JMenuItem btnMostrarMayor;
     public javax.swing.JMenuItem btnSalir;

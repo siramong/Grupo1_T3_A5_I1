@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package proyecto;
+import proyecto.vistas.MenuPrincipal;
 
 /**
  *
@@ -15,7 +16,8 @@ public class principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MenuPrincipal vistaPackage = new MenuPrincipal();
+        vistaPackage.setVisible(true);
     }
     
 }
