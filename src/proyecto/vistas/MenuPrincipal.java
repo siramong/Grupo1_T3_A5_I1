@@ -6,6 +6,7 @@
 package proyecto.vistas;
 import proyecto.Modelo;
 import proyecto.Controlador;
+import proyecto.vistas.AcercaDe;
 
 /**
  *
@@ -18,10 +19,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
      */
     Controlador contr;
     Modelo model;
+    AcercaDe acercaDe2;
     public MenuPrincipal() {
         initComponents();
         model = new Modelo();
-        contr = new Controlador(this,model);
+        acercaDe2 = new AcercaDe();
+        contr = new Controlador(this,acercaDe2,model);
     }
 
     /**

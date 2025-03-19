@@ -5,6 +5,7 @@
  */
 package proyecto;
 import proyecto.vistas.MenuPrincipal;
+import proyecto.vistas.AcercaDe;
 
 /**
  *
@@ -18,6 +19,7 @@ public class principal {
     public static void main(String[] args) {
         MenuPrincipal vistaPackage = new MenuPrincipal();
         vistaPackage.setVisible(true);
+        AcercaDe acercaDePackage = new AcercaDe();
     }
     
 }

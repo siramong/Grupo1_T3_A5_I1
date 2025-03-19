@@ -5,6 +5,9 @@
  */
 package proyecto.vistas;
 
+import proyecto.Controlador;
+import proyecto.Modelo;
+
 /**
  *
  * @author PC_16
@@ -14,6 +17,7 @@ public class AcercaDe extends javax.swing.JFrame {
     /**
      * Creates new form AcercaDe
      */
+
     public AcercaDe() {
         initComponents();
     }
