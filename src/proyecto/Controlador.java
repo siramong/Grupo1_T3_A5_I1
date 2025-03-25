@@ -16,11 +16,12 @@ public class Controlador implements ActionListener {
     Modelo modeloMain;
     AcercaDe vistaAcercaDe;
     
-    public Controlador(MenuPrincipal vistaPrincipal, AcercaDe _vistaAcercaDe, Modelo modeloMain) {
+    public Controlador(MenuPrincipal vistaPrincipal, Modelo modeloMain) {
         this.vistaPrincipal = vistaPrincipal;
         this.modeloMain = modeloMain;
-        this.vistaAcercaDe = _vistaAcercaDe;
         
+        //BLOQUE DE EJECUCION PARA VISTAS
+        this.vistaAcercaDe = new AcercaDe();
         vistaPrincipal.btnAcercaDe.addActionListener(this);
         vistaAcercaDe.btnCerrarAcercaDe.addActionListener(this);
     }
@@ -29,10 +30,8 @@ public class Controlador implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         Object buttonPressed = ae.getSource();
         if (buttonPressed == vistaPrincipal.btnAcercaDe) {
-            System.out.println("Showed acerca de");
             vistaAcercaDe.setVisible(true);
         } else if (buttonPressed == vistaAcercaDe.btnCerrarAcercaDe){
-            System.out.println("Closed acerca de");
             vistaAcercaDe.setVisible(false);
         }
     }
