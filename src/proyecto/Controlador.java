@@ -72,6 +72,11 @@ public class Controlador implements ActionListener {
             vistaInstructivo.setVisible(true);
         } else if (buttonPressed == vistaPrincipal.btnMostrarListado) {
             vistaMostrarListado.setVisible(true);
+            String arrayPrint = "";
+            for (int i = 0; modeloMain.getArrayNumbers().length > i; i++) {
+                arrayPrint = arrayPrint + (i + ": " + modeloMain.getData(i)+"\n");
+            }
+            vistaMostrarListado.txtPaneListado.setText(arrayPrint);
         } else if (buttonPressed == vistaPrincipal.btnMostrarMayor) {
             vistaMostrarMayor.setVisible(true);
         } else if (buttonPressed == vistaAcercaDe.btnCerrarAcercaDe) {

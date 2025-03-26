@@ -29,7 +29,8 @@ public class MostrarListado extends javax.swing.JFrame {
 
         btnCerrarMostrarListado = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        lblListadoVector = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtPaneListado = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,7 +43,8 @@ public class MostrarListado extends javax.swing.JFrame {
 
         jLabel1.setText("Listado de datos del vector:");
 
-        lblListadoVector.setText("...");
+        txtPaneListado.setEditable(false);
+        jScrollPane1.setViewportView(txtPaneListado);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,13 +53,13 @@ public class MostrarListado extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnCerrarMostrarListado))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(0, 108, Short.MAX_VALUE))
-                    .addComponent(lblListadoVector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 108, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -66,7 +68,7 @@ public class MostrarListado extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblListadoVector, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCerrarMostrarListado)
                 .addContainerGap())
@@ -118,6 +120,7 @@ public class MostrarListado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCerrarMostrarListado;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblListadoVector;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTextPane txtPaneListado;
     // End of variables declaration//GEN-END:variables
 }
