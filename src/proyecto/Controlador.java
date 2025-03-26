@@ -16,7 +16,7 @@ import proyecto.vistas.MostrarListado;
 import proyecto.vistas.MostrarMayor;
 
 public class Controlador implements ActionListener {
-    
+
     MenuPrincipal vistaPrincipal;
     Modelo modeloMain;
     AcercaDe vistaAcercaDe;
@@ -25,38 +25,39 @@ public class Controlador implements ActionListener {
     Instructivo vistaInstructivo;
     MostrarListado vistaMostrarListado;
     MostrarMayor vistaMostrarMayor;
-    
+
     public Controlador(MenuPrincipal vistaPrincipal, Modelo modeloMain) {
         this.vistaPrincipal = vistaPrincipal;
         this.modeloMain = modeloMain;
-        
+
         this.vistaPrincipal.btnSalir.addActionListener(this);
-        
+
         this.vistaAcercaDe = new AcercaDe();
         vistaPrincipal.btnAcercaDe.addActionListener(this);
         vistaAcercaDe.btnCerrarAcercaDe.addActionListener(this);
-        
+
         this.vistaCrearVector = new CrearVector();
         vistaPrincipal.btnCrearVector.addActionListener(this);
         vistaCrearVector.btnCerrarCrearVector.addActionListener(this);
-        
+        vistaCrearVector.btnEnviarVector.addActionListener(this);
+
         this.vistaIngresarDatos = new IngresarDatos();
         vistaPrincipal.btnIngresarDatos.addActionListener(this);
         vistaIngresarDatos.btnCerrarIngresarDatos.addActionListener(this);
-        
+
         this.vistaInstructivo = new Instructivo();
         vistaPrincipal.btnInstructivo.addActionListener(this);
         vistaInstructivo.btnCerrarInstructivo.addActionListener(this);
-        
+
         this.vistaMostrarListado = new MostrarListado();
         vistaPrincipal.btnMostrarListado.addActionListener(this);
         vistaMostrarListado.btnCerrarMostrarListado.addActionListener(this);
-        
+
         this.vistaMostrarMayor = new MostrarMayor();
         vistaPrincipal.btnMostrarMayor.addActionListener(this);
         vistaMostrarMayor.btnCerrarMostrarMayor.addActionListener(this);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
         Object buttonPressed = ae.getSource();
@@ -84,8 +85,16 @@ public class Controlador implements ActionListener {
             vistaMostrarListado.setVisible(false);
         } else if (buttonPressed == vistaMostrarMayor.btnCerrarMostrarMayor) {
             vistaMostrarMayor.setVisible(false);
-        } else if(buttonPressed == vistaPrincipal.btnSalir) {
+        } else if (buttonPressed == vistaPrincipal.btnSalir) {
             vistaPrincipal.setVisible(false);
+        } else if (buttonPressed == vistaCrearVector.btnEnviarVector) {
+            modeloMain.setLenghtArray(Integer.parseInt(vistaCrearVector.txtEnviarVector.getText()));
+            int returnCodeCreate = modeloMain.createArray();
+            if (returnCodeCreate == 400) {
+                vistaCrearVector.lblCrearVector.setText("Vector Creado. Tamaño: " + modeloMain.getLenghtArray());
+            } else if (returnCodeCreate == 200) {
+                vistaCrearVector.lblCrearVector.setText("Vector Ya Creado");
+            }
         }
     }
 }
