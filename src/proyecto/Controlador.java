@@ -44,6 +44,7 @@ public class Controlador implements ActionListener {
         this.vistaIngresarDatos = new IngresarDatos();
         vistaPrincipal.btnIngresarDatos.addActionListener(this);
         vistaIngresarDatos.btnCerrarIngresarDatos.addActionListener(this);
+        vistaIngresarDatos.btnEnviarDatosVector.addActionListener(this);
 
         this.vistaInstructivo = new Instructivo();
         vistaPrincipal.btnInstructivo.addActionListener(this);
@@ -94,6 +95,15 @@ public class Controlador implements ActionListener {
                 vistaCrearVector.lblCrearVector.setText("Vector Creado. Tamaño: " + modeloMain.getLenghtArray());
             } else if (returnCodeCreate == 200) {
                 vistaCrearVector.lblCrearVector.setText("Vector Ya Creado");
+            }
+        } else if (buttonPressed == vistaIngresarDatos.btnEnviarDatosVector) {
+            int posData = Integer.parseInt(vistaIngresarDatos.txtIngresarPosicion.getText());
+            int valData = Integer.parseInt(vistaIngresarDatos.txtIngresarVariable.getText());
+            vistaIngresarDatos.lblPosicionVector.setText("" + posData);
+            vistaIngresarDatos.lblVariableIngreso.setText("" + valData);
+            modeloMain.loadData(posData, valData);
+            for (int i = 0; modeloMain.getArrayNumbers().length > i; i++) {
+                System.out.println("Pos: " + i + " Val: " + modeloMain.getData(i));
             }
         }
     }

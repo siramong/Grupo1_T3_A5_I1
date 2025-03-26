@@ -31,7 +31,7 @@ public class IngresarDatos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblPosicionVector = new javax.swing.JLabel();
-        btnEnviarVariableVector = new javax.swing.JButton();
+        btnEnviarDatosVector = new javax.swing.JButton();
         txtIngresarPosicion = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         lblVariableIngreso = new javax.swing.JLabel();
@@ -53,10 +53,10 @@ public class IngresarDatos extends javax.swing.JFrame {
         lblPosicionVector.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPosicionVector.setText("Ninguna");
 
-        btnEnviarVariableVector.setText("Enviar");
-        btnEnviarVariableVector.addActionListener(new java.awt.event.ActionListener() {
+        btnEnviarDatosVector.setText("Enviar");
+        btnEnviarDatosVector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEnviarVariableVectorActionPerformed(evt);
+                btnEnviarDatosVectorActionPerformed(evt);
             }
         });
 
@@ -76,12 +76,12 @@ public class IngresarDatos extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(327, Short.MAX_VALUE)
+                        .addGap(0, 317, Short.MAX_VALUE)
                         .addComponent(btnCerrarIngresarDatos))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -105,7 +105,7 @@ public class IngresarDatos extends javax.swing.JFrame {
                                 .addComponent(txtIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnEnviarVariableVector, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEnviarDatosVector, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -126,7 +126,7 @@ public class IngresarDatos extends javax.swing.JFrame {
                     .addComponent(txtIngresarPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEnviarVariableVector)
+                .addComponent(btnEnviarDatosVector)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(btnCerrarIngresarDatos)
                 .addContainerGap())
@@ -143,9 +143,9 @@ public class IngresarDatos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIngresarPosicionActionPerformed
 
-    private void btnEnviarVariableVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarVariableVectorActionPerformed
+    private void btnEnviarDatosVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarDatosVectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEnviarVariableVectorActionPerformed
+    }//GEN-LAST:event_btnEnviarDatosVectorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,7 +185,7 @@ public class IngresarDatos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCerrarIngresarDatos;
-    public javax.swing.JButton btnEnviarVariableVector;
+    public javax.swing.JButton btnEnviarDatosVector;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
