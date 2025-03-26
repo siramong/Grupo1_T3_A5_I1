@@ -34,6 +34,7 @@ public class CrearVector extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Crear Vector");
 
         btnCerrarCrearVector.setText("Cerrar");
         btnCerrarCrearVector.addActionListener(new java.awt.event.ActionListener() {

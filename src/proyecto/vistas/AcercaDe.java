@@ -43,6 +43,7 @@ public class AcercaDe extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Acerca de");
 
         btnCerrarAcercaDe.setText("Cerrar");
         btnCerrarAcercaDe.addActionListener(new java.awt.event.ActionListener() {

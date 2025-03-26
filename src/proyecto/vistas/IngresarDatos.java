@@ -38,6 +38,7 @@ public class IngresarDatos extends javax.swing.JFrame {
         txtIngresarVariable = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ingresar Datos");
 
         btnCerrarIngresarDatos.setText("Cerrar");
         btnCerrarIngresarDatos.addActionListener(new java.awt.event.ActionListener() {
@@ -102,8 +103,7 @@ public class IngresarDatos extends javax.swing.JFrame {
                                 .addGap(53, 53, 53))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
-                                .addComponent(txtIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(txtIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnEnviarDatosVector, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))

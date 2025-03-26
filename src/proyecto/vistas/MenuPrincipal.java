@@ -52,6 +52,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu3.setText("jMenu3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menú Principal");
 
         jLabel1.setText("Practica: Vectores con MVC");
 

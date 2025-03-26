@@ -33,6 +33,7 @@ public class MostrarListado extends javax.swing.JFrame {
         txtPaneListado = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mostrar Listado");
 
         btnCerrarMostrarListado.setText("Cerrar");
         btnCerrarMostrarListado.addActionListener(new java.awt.event.ActionListener() {
