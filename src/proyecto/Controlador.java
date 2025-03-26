@@ -74,7 +74,7 @@ public class Controlador implements ActionListener {
             vistaMostrarListado.setVisible(true);
             String arrayPrint = "";
             for (int i = 0; modeloMain.getArrayNumbers().length > i; i++) {
-                arrayPrint = arrayPrint + (i + ": " + modeloMain.getData(i)+"\n");
+                arrayPrint = arrayPrint + (i + ": " + modeloMain.getData(i) + "\n");
             }
             vistaMostrarListado.txtPaneListado.setText(arrayPrint);
         } else if (buttonPressed == vistaPrincipal.btnMostrarMayor) {
@@ -107,9 +107,6 @@ public class Controlador implements ActionListener {
             vistaIngresarDatos.lblPosicionVector.setText("" + posData);
             vistaIngresarDatos.lblVariableIngreso.setText("" + valData);
             modeloMain.loadData(posData, valData);
-            for (int i = 0; modeloMain.getArrayNumbers().length > i; i++) {
-                System.out.println("Pos: " + i + " Val: " + modeloMain.getData(i));
-            }
         }
     }
 }
