@@ -28,6 +28,15 @@ public class IngresarDatos extends javax.swing.JFrame {
     private void initComponents() {
 
         btnCerrarIngresarDatos = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lblPosicionVector = new javax.swing.JLabel();
+        btnEnviarPosicionVector = new javax.swing.JButton();
+        txtIngresarPosicion = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        lblVariableIngreso = new javax.swing.JLabel();
+        txtIngresarVariable = new javax.swing.JTextField();
+        btnEnviarIngresarVariable = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,19 +47,90 @@ public class IngresarDatos extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Ingresos de datos del vector:");
+
+        jLabel2.setText("Posicion actual del vector:");
+
+        lblPosicionVector.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPosicionVector.setText("Ninguna");
+
+        btnEnviarPosicionVector.setText("Enviar");
+        btnEnviarPosicionVector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarPosicionVectorActionPerformed(evt);
+            }
+        });
+
+        txtIngresarPosicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIngresarPosicionActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Variable Ingresada:");
+
+        lblVariableIngreso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblVariableIngreso.setText("Ninguna");
+
+        btnEnviarIngresarVariable.setText("Enviar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(327, Short.MAX_VALUE)
-                .addComponent(btnCerrarIngresarDatos)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(327, Short.MAX_VALUE)
+                        .addComponent(btnCerrarIngresarDatos))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPosicionVector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtIngresarPosicion)
+                    .addComponent(btnEnviarPosicionVector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblVariableIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(53, 53, 53))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnEnviarIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGap(1, 1, 1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPosicionVector)
+                    .addComponent(lblVariableIngreso))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtIngresarPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIngresarVariable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEnviarPosicionVector)
+                    .addComponent(btnEnviarIngresarVariable))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(btnCerrarIngresarDatos)
                 .addContainerGap())
         );
@@ -61,6 +141,14 @@ public class IngresarDatos extends javax.swing.JFrame {
     private void btnCerrarIngresarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarIngresarDatosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCerrarIngresarDatosActionPerformed
+
+    private void txtIngresarPosicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIngresarPosicionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIngresarPosicionActionPerformed
+
+    private void btnEnviarPosicionVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarPosicionVectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarPosicionVectorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,5 +188,14 @@ public class IngresarDatos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCerrarIngresarDatos;
+    public javax.swing.JButton btnEnviarIngresarVariable;
+    public javax.swing.JButton btnEnviarPosicionVector;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel lblPosicionVector;
+    public javax.swing.JLabel lblVariableIngreso;
+    public javax.swing.JTextField txtIngresarPosicion;
+    public javax.swing.JTextField txtIngresarVariable;
     // End of variables declaration//GEN-END:variables
 }
