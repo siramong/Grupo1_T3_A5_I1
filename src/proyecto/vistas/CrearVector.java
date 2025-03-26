@@ -28,6 +28,9 @@ public class CrearVector extends javax.swing.JFrame {
     private void initComponents() {
 
         btnCerrarCrearVector = new javax.swing.JButton();
+        btnEnviarVector = new javax.swing.JButton();
+        txtEnviarVector = new javax.swing.JTextField();
+        lblCrearVector = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,19 +41,45 @@ public class CrearVector extends javax.swing.JFrame {
             }
         });
 
+        btnEnviarVector.setText("Enviar Vector");
+        btnEnviarVector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarVectorActionPerformed(evt);
+            }
+        });
+
+        lblCrearVector.setText(".");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(327, Short.MAX_VALUE)
-                .addComponent(btnCerrarCrearVector)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(232, Short.MAX_VALUE)
+                        .addComponent(btnCerrarCrearVector))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEnviarVector, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEnviarVector))
+                        .addGap(0, 106, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblCrearVector, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addContainerGap(186, Short.MAX_VALUE)
+                .addComponent(txtEnviarVector, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEnviarVector)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblCrearVector)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCerrarCrearVector)
                 .addContainerGap())
         );
@@ -61,6 +90,10 @@ public class CrearVector extends javax.swing.JFrame {
     private void btnCerrarCrearVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarCrearVectorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCerrarCrearVectorActionPerformed
+
+    private void btnEnviarVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarVectorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarVectorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,5 +133,8 @@ public class CrearVector extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCerrarCrearVector;
+    public javax.swing.JButton btnEnviarVector;
+    public javax.swing.JLabel lblCrearVector;
+    public javax.swing.JTextField txtEnviarVector;
     // End of variables declaration//GEN-END:variables
 }
