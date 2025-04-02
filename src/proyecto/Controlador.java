@@ -7,6 +7,7 @@ package proyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.DefaultListModel;
 import proyecto.vistas.AcercaDe;
 import proyecto.vistas.MenuPrincipal;
 import proyecto.vistas.CrearVector;
@@ -72,11 +73,17 @@ public class Controlador implements ActionListener {
             vistaInstructivo.setVisible(true);
         } else if (buttonPressed == vistaPrincipal.btnMostrarListado) {
             vistaMostrarListado.setVisible(true);
-            String arrayPrint = "";
-            for (int i = 0; modeloMain.getArrayNumbers().length > i; i++) {
-                arrayPrint = arrayPrint + (i + ": " + modeloMain.getData(i) + "\n");
+            // Crear una instancia de DefaultListModel
+            DefaultListModel<String> modeloLista = new DefaultListModel<>();
+
+// Llenar el modelo con los datos de modeloMain
+            for (int i = 0; i < modeloMain.getArrayNumbers().length; i++) {
+                modeloLista.addElement(i + ": " + modeloMain.getData(i));
             }
-            vistaMostrarListado.txtPaneListado.setText(arrayPrint);
+
+// Asignar el modelo al JList
+            vistaMostrarListado.lstPanelListado.setModel(modeloLista);
+
         } else if (buttonPressed == vistaPrincipal.btnMostrarMayor) {
             vistaMostrarMayor.setVisible(true);
         } else if (buttonPressed == vistaAcercaDe.btnCerrarAcercaDe) {
