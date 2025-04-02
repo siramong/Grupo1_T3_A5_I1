@@ -54,8 +54,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú Principal");
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Practica: Vectores con MVC");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("INFORMÁTICA");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/imagenes/logouets.png"))); // NOI18N
@@ -66,6 +69,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuBoton.add(btnCrearVector);
 
         btnIngresarDatos.setText("Ingresar datos");
+        btnIngresarDatos.setEnabled(false);
         btnIngresarDatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarDatosActionPerformed(evt);
@@ -74,9 +78,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuBoton.add(btnIngresarDatos);
 
         btnMostrarMayor.setText("Mostrar Mayor");
+        btnMostrarMayor.setEnabled(false);
         MenuBoton.add(btnMostrarMayor);
 
         btnMostrarListado.setText("Mostrar listado");
+        btnMostrarListado.setEnabled(false);
         btnMostrarListado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMostrarListadoActionPerformed(evt);
@@ -104,7 +110,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(btnInstructivo);
 
-        btnAcercaDe.setText("Acerca de:");
+        btnAcercaDe.setText("Acerca de");
+        btnAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcercaDeActionPerformed(evt);
+            }
+        });
         jMenu2.add(btnAcercaDe);
 
         jMenuBar1.add(jMenu2);
@@ -115,10 +126,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -128,13 +135,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(51, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(115, 115, 115))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,6 +170,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercaDeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAcercaDeActionPerformed
 
     /**
      * @param args the command line arguments

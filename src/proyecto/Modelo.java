@@ -26,9 +26,8 @@ public class Modelo {
         this.arrayNumbers = arrayNumbers;
     }
 
-    public int createArray() {
+    public void createArray() {
         arrayNumbers = new int[lenghtArray];
-        return 400;
     }
 
     public void loadData(int pos, int data) {

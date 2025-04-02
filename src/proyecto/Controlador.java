@@ -73,19 +73,24 @@ public class Controlador implements ActionListener {
             vistaInstructivo.setVisible(true);
         } else if (buttonPressed == vistaPrincipal.btnMostrarListado) {
             vistaMostrarListado.setVisible(true);
-            // Crear una instancia de DefaultListModel
             DefaultListModel<String> modeloLista = new DefaultListModel<>();
-
-// Llenar el modelo con los datos de modeloMain
             for (int i = 0; i < modeloMain.getArrayNumbers().length; i++) {
                 modeloLista.addElement(i + ": " + modeloMain.getData(i));
             }
-
-// Asignar el modelo al JList
             vistaMostrarListado.lstPanelListado.setModel(modeloLista);
-
         } else if (buttonPressed == vistaPrincipal.btnMostrarMayor) {
             vistaMostrarMayor.setVisible(true);
+            int mayor = modeloMain.getData(0);
+            int posicion = 0;
+
+            for (int i = 1; i < modeloMain.getArrayNumbers().length; i++) {
+                if (modeloMain.getData(i) > mayor) {
+                    mayor = modeloMain.getData(i);
+                    posicion = i;
+                }
+            }
+            vistaMostrarMayor.lblNumeroMayor.setText(Integer.toString(mayor));
+            vistaMostrarMayor.lblPosicionNumeroMayor.setText(Integer.toString(posicion));
         } else if (buttonPressed == vistaAcercaDe.btnCerrarAcercaDe) {
             vistaAcercaDe.setVisible(false);
         } else if (buttonPressed == vistaCrearVector.btnCerrarCrearVector) {
@@ -100,14 +105,14 @@ public class Controlador implements ActionListener {
             vistaMostrarMayor.setVisible(false);
         } else if (buttonPressed == vistaPrincipal.btnSalir) {
             vistaPrincipal.setVisible(false);
+            vistaPrincipal.dispose();
         } else if (buttonPressed == vistaCrearVector.btnEnviarVector) {
             modeloMain.setLenghtArray(Integer.parseInt(vistaCrearVector.txtEnviarVector.getText()));
-            int returnCodeCreate = modeloMain.createArray();
-            if (returnCodeCreate == 400) {
-                vistaCrearVector.lblCrearVector.setText("Vector Creado. Tamaño: " + modeloMain.getLenghtArray());
-            } else if (returnCodeCreate == 200) {
-                vistaCrearVector.lblCrearVector.setText("Vector Ya Creado");
-            }
+            modeloMain.createArray();
+            vistaCrearVector.lblCrearVector.setText("Vector Creado. Tamaño: " + modeloMain.getLenghtArray());
+            vistaPrincipal.btnIngresarDatos.setEnabled(true);
+            vistaPrincipal.btnMostrarMayor.setEnabled(true);
+            vistaPrincipal.btnMostrarListado.setEnabled(true);
         } else if (buttonPressed == vistaIngresarDatos.btnEnviarDatosVector) {
             int posData = Integer.parseInt(vistaIngresarDatos.txtIngresarPosicion.getText());
             int valData = Integer.parseInt(vistaIngresarDatos.txtIngresarVariable.getText());
